@@ -1,4 +1,3 @@
-
 import QtQuick.Layouts 1.4
 import QtQuick 2.4
 import QtQuick.Controls 2.0
@@ -17,32 +16,33 @@ Mycroft.PaginatedDelegate {
     graceTime: 300000
     backgroundDim: 0.8
     backgroundImage: getWeatherImagery(weathercode)[1]
+    switchHeight: Kirigami.Units.gridUnit * 50
 
     function getWeatherImagery(weathercode){
         switch(weathercode) {
         case 0:
-            return ["icons/day.svg", "https://source.unsplash.com/1920x1080/?+sky"]
+            return ["Cloudrain.qml", "https://source.unsplash.com/1920x1080/?+sky"]
             break
         case 1:
-            return ["icons/cloudy-day-2.svg", "https://source.unsplash.com/1920x1080/?+scatteredclouds"]
+            return ["Cloudrain.qml", "https://source.unsplash.com/1920x1080/?+scatteredclouds"]
             break
         case 2:
-            return ["icons/cloudy.svg", "https://source.unsplash.com/1920x1080/?+cloudy"]
+            return ["Cloudrain.qml", "https://source.unsplash.com/1920x1080/?+cloudy"]
             break
         case 3:
-            return ["icons/rain.svg", "https://source.unsplash.com/1920x1080/?+rain"]
+            return ["Cloudrain.qml", "https://source.unsplash.com/1920x1080/?+rain"]
             break
         case 4:
-            return ["icons/rainy-1.svg", "https://source.unsplash.com/1920x1080/?+rains"]
+            return ["Cloudrain.qml", "https://source.unsplash.com/1920x1080/?+rains"]
             break
         case 5:
-            return ["icons/storm.svg", "https://source.unsplash.com/1920x1080/?+storm"]
+            return ["Cloudrain.qml", "https://source.unsplash.com/1920x1080/?+storm"]
             break
         case 6:
-            return ["icons/snowy-6.svg", "https://source.unsplash.com/1920x1080/?+snow"]
+            return ["Cloudrain.qml", "https://source.unsplash.com/1920x1080/?+snow"]
             break
         case 7:
-            return ["icons/haze.svg", "https://source.unsplash.com/1920x1080/?+mist"]
+            return ["Cloudrain.qml", "https://source.unsplash.com/1920x1080/?+mist"]
             break
         }
     }
@@ -81,12 +81,12 @@ Mycroft.PaginatedDelegate {
         ColumnLayout {
             id: dc
             anchors.centerIn: parent
-            spacing: Kirigami.Units.largeSpacing
-            Image {
+            spacing: Kirigami.Units.largeSpacing * 2
+            Loader {
                 id: img
-                fillMode: Image.PreserveAspectFit
-                Layout.preferredWidth: Kirigami.Units.gridUnit * 8
-                Layout.preferredHeight: Kirigami.Units.gridUnit * 8
+                //fillMode: Image.PreserveAspectFit
+                Layout.preferredWidth: Kirigami.Units.gridUnit * 10
+                Layout.preferredHeight: Kirigami.Units.gridUnit * 10
                 source: getWeatherImagery(weathercode)[0]
             }
             Kirigami.Heading {
@@ -95,7 +95,7 @@ Mycroft.PaginatedDelegate {
                 level: 1
                 wrapMode: Text.WordWrap
                 font.bold: true
-                font.pointSize: Kirigami.Units.gridUnit * 4
+                font.pointSize: Kirigami.Units.gridUnit * 5
                 font.weight: Font.ExtraBold
                 text: current + "°"
             }
@@ -113,7 +113,7 @@ Mycroft.PaginatedDelegate {
             Kirigami.Heading {
                 wrapMode: Text.WordWrap
                // elide: Text.ElideRight
-                level: 2
+                level: 1
                 text: forecastDump.forecast[0].date
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignHCenter
@@ -131,23 +131,21 @@ Mycroft.PaginatedDelegate {
                 Layout.fillWidth: true
                 Kirigami.Heading {
                     wrapMode: Text.WordWrap
-                    Kirigami.FormData.label: "Low:"
                     font.bold: true
                     font.pointSize: Kirigami.Units.gridUnit * 4
                     font.weight: Font.ExtraBold
                     elide: Text.ElideRight
-                    level: 2
-                    text: forecastDump.forecast[0].min + "°"
+                    level: 1
+                    text: Math.floor(forecastDump.forecast[0].min) + "°"
                 }
                 Kirigami.Heading {
                     wrapMode: Text.WordWrap
-                    Kirigami.FormData.label: "High:"
                     elide: Text.ElideRight
-                    level: 2
+                    level: 1
                     font.bold: true
                     font.pointSize: Kirigami.Units.gridUnit * 4
                     font.weight: Font.ExtraBold
-                    text: forecastDump.forecast[0].max + "°"
+                    text: Math.floor(forecastDump.forecast[0].max) + "°"
                 }
             }
         }
@@ -163,7 +161,7 @@ Mycroft.PaginatedDelegate {
             Kirigami.Heading {
                 wrapMode: Text.WordWrap
                 //elide: Text.ElideRight
-                level: 2
+                level: 1
                 text: forecastDump.forecast[1].date
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignHCenter
@@ -181,23 +179,21 @@ Mycroft.PaginatedDelegate {
                 Layout.fillWidth: true
                 Kirigami.Heading {
                     wrapMode: Text.WordWrap
-                    Kirigami.FormData.label: "Low:"
                     font.bold: true
                     font.pointSize: Kirigami.Units.gridUnit * 4
                     font.weight: Font.ExtraBold
                     elide: Text.ElideRight
-                    level: 2
-                    text: forecastDump.forecast[1].min + "°"
+                    level: 1
+                    text: Math.floor(forecastDump.forecast[1].min) + "°"
                 }
                 Kirigami.Heading {
                     wrapMode: Text.WordWrap
-                    Kirigami.FormData.label: "High:"
                     elide: Text.ElideRight
-                    level: 2
+                    level: 1
                     font.bold: true
                     font.pointSize: Kirigami.Units.gridUnit * 4
                     font.weight: Font.ExtraBold
-                    text: forecastDump.forecast[1].max + "°"
+                    text: Math.floor(forecastDump.forecast[1].max) + "°"
                 }
             }
         }
@@ -213,7 +209,7 @@ Mycroft.PaginatedDelegate {
             Kirigami.Heading {
                 wrapMode: Text.WordWrap
                 //elide: Text.ElideRight
-                level: 2
+                level: 1
                 text: forecastDump.forecast[2].date
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignHCenter
@@ -231,23 +227,21 @@ Mycroft.PaginatedDelegate {
                 Layout.fillWidth: true
                 Kirigami.Heading {
                     wrapMode: Text.WordWrap
-                    Kirigami.FormData.label: "Low:"
                     font.bold: true
                     font.pointSize: Kirigami.Units.gridUnit * 4
                     font.weight: Font.ExtraBold
                     elide: Text.ElideRight
-                    level: 2
-                    text: forecastDump.forecast[2].min + "°"
+                    level: 1
+                    text: Math.floor(forecastDump.forecast[2].min) + "°"
                 }
                 Kirigami.Heading {
                     wrapMode: Text.WordWrap
-                    Kirigami.FormData.label: "High:"
                     elide: Text.ElideRight
-                    level: 2
+                    level: 1
                     font.bold: true
                     font.pointSize: Kirigami.Units.gridUnit * 4
                     font.weight: Font.ExtraBold
-                    text: forecastDump.forecast[2].max + "°"
+                    text: Math.floor(forecastDump.forecast[2].max) + "°"
                 }
             }
         }
