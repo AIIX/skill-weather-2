@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- (c) ammap.com | SVG weather icons -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="64"
+   height="64"
+   viewbox="0 0 64 64"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="day.svg">
+  <metadata
+     id="metadata62">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     id="namedview60"
+     showgrid="false"
+     inkscape:zoom="3.6875"
+     inkscape:cx="32"
+     inkscape:cy="32"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="day" />
+  <defs
+     id="defs4">
+    <filter
+       id="blur"
+       width="200%"
+       height="200%">
+      <feGaussianBlur
+         in="SourceAlpha"
+         stdDeviation="3"
+         id="feGaussianBlur7" />
+      <feOffset
+         dx="0"
+         dy="4"
+         result="offsetblur"
+         id="feOffset9" />
+      <feComponentTransfer
+         id="feComponentTransfer11">
+        <feFuncA
+           type="linear"
+           slope="0.05"
+           id="feFuncA13" />
+      </feComponentTransfer>
+      <feMerge
+         id="feMerge15">
+        <feMergeNode
+           id="feMergeNode17" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode19" />
+      </feMerge>
+    </filter>
+  </defs>
+  <g
+     id="day"
+     filter="url(#blur)">
+    <g
+       transform="matrix(2.2294223,0,0,2.2294223,32,32)"
+       id="g22">
+      <g
+         class="am-weather-sun am-weather-sun-shiny am-weather-easing-ease-in-out"
+         id="g24">
+        <g
+           id="g26">
+          <line
+             transform="translate(0,9)"
+             x1="0"
+             x2="0"
+             y1="0"
+             y2="3"
+             id="line28"
+             style="fill:none;stroke:#ffa500;stroke-width:2;stroke-linecap:round" />
+        </g>
+        <g
+           transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)"
+           id="g30">
+          <line
+             transform="translate(0,9)"
+             x1="0"
+             x2="0"
+             y1="0"
+             y2="3"
+             id="line32"
+             style="fill:none;stroke:#ffa500;stroke-width:2;stroke-linecap:round" />
+        </g>
+        <g
+           transform="matrix(0,1,-1,0,0,0)"
+           id="g34">
+          <line
+             transform="translate(0,9)"
+             x1="0"
+             x2="0"
+             y1="0"
+             y2="3"
+             id="line36"
+             style="fill:none;stroke:#ffa500;stroke-width:2;stroke-linecap:round" />
+        </g>
+        <g
+           transform="matrix(-0.70710678,0.70710678,-0.70710678,-0.70710678,0,0)"
+           id="g38">
+          <line
+             transform="translate(0,9)"
+             x1="0"
+             x2="0"
+             y1="0"
+             y2="3"
+             id="line40"
+             style="fill:none;stroke:#ffa500;stroke-width:2;stroke-linecap:round" />
+        </g>
+        <g
+           transform="scale(-1,-1)"
+           id="g42">
+          <line
+             transform="translate(0,9)"
+             x1="0"
+             x2="0"
+             y1="0"
+             y2="3"
+             id="line44"
+             style="fill:none;stroke:#ffa500;stroke-width:2;stroke-linecap:round" />
+        </g>
+        <g
+           transform="matrix(-0.70710678,-0.70710678,0.70710678,-0.70710678,0,0)"
+           id="g46">
+          <line
+             transform="translate(0,9)"
+             x1="0"
+             x2="0"
+             y1="0"
+             y2="3"
+             id="line48"
+             style="fill:none;stroke:#ffa500;stroke-width:2;stroke-linecap:round" />
+        </g>
+        <g
+           transform="matrix(0,-1,1,0,0,0)"
+           id="g50">
+          <line
+             transform="translate(0,9)"
+             x1="0"
+             x2="0"
+             y1="0"
+             y2="3"
+             id="line52"
+             style="fill:none;stroke:#ffa500;stroke-width:2;stroke-linecap:round" />
+        </g>
+        <g
+           transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)"
+           id="g54">
+          <line
+             transform="translate(0,9)"
+             x1="0"
+             x2="0"
+             y1="0"
+             y2="3"
+             id="line56"
+             style="fill:none;stroke:#ffa500;stroke-width:2;stroke-linecap:round" />
+        </g>
+      </g>
+      <circle
+         cx="0"
+         cy="0"
+         r="5"
+         id="circle58"
+         style="fill:#ffa500;stroke:#ffa500;stroke-width:2" />
+    </g>
+  </g>
+</svg>
